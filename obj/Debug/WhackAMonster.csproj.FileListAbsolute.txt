@@ -1,0 +1,13 @@
+C:\Users\Sony\Documents\Visual Studio 2013\Projects\FINAL2530\WhackAMonster\WhackAMonster\bin\Debug\WhackAMonster.exe.config
+C:\Users\Sony\Documents\Visual Studio 2013\Projects\FINAL2530\WhackAMonster\WhackAMonster\bin\Debug\WhackAMonster.exe
+C:\Users\Sony\Documents\Visual Studio 2013\Projects\FINAL2530\WhackAMonster\WhackAMonster\bin\Debug\WhackAMonster.pdb
+C:\Users\Sony\Documents\Visual Studio 2013\Projects\FINAL2530\WhackAMonster\WhackAMonster\obj\Debug\WhackAMonster.csprojResolveAssemblyReference.cache
+C:\Users\Sony\Documents\Visual Studio 2013\Projects\FINAL2530\WhackAMonster\WhackAMonster\obj\Debug\MainWindow.baml
+C:\Users\Sony\Documents\Visual Studio 2013\Projects\FINAL2530\WhackAMonster\WhackAMonster\obj\Debug\MainWindow.g.cs
+C:\Users\Sony\Documents\Visual Studio 2013\Projects\FINAL2530\WhackAMonster\WhackAMonster\obj\Debug\App.g.cs
+C:\Users\Sony\Documents\Visual Studio 2013\Projects\FINAL2530\WhackAMonster\WhackAMonster\obj\Debug\WhackAMonster_MarkupCompile.cache
+C:\Users\Sony\Documents\Visual Studio 2013\Projects\FINAL2530\WhackAMonster\WhackAMonster\obj\Debug\WhackAMonster.g.resources
+C:\Users\Sony\Documents\Visual Studio 2013\Projects\FINAL2530\WhackAMonster\WhackAMonster\obj\Debug\WhackAMonster.Properties.Resources.resources
+C:\Users\Sony\Documents\Visual Studio 2013\Projects\FINAL2530\WhackAMonster\WhackAMonster\obj\Debug\WhackAMonster.csproj.GenerateResource.Cache
+C:\Users\Sony\Documents\Visual Studio 2013\Projects\FINAL2530\WhackAMonster\WhackAMonster\obj\Debug\WhackAMonster.exe
+C:\Users\Sony\Documents\Visual Studio 2013\Projects\FINAL2530\WhackAMonster\WhackAMonster\obj\Debug\WhackAMonster.pdb
