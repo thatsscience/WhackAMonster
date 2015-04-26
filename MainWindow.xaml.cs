@@ -30,65 +30,72 @@ namespace WhackAMonster
         {
             InitializeComponent();
             DispatcherTimer arm1 = new DispatcherTimer();
-            arm1.Interval = new TimeSpan(0, 0, 0, 0, 100);
+            arm1.Interval = new TimeSpan(0, 0, 0, 0, 150);
             arm1.Tick += new EventHandler(enterFrame);
-            arm1.Start(); 
+            arm1.Start();
+
+            //DispatcherTimer arm2 = new DispatcherTimer();
+            //arm2.Interval = new TimeSpan(0, 0, 0, 0, 150);
+            //arm2.Tick += new EventHandler(enterFrame);
+            //arm2.Start(); 
             
         }
 
-        private async void arm2_Click(object sender, RoutedEventArgs e)
+        private async void arm_Click(object sender, RoutedEventArgs e)
         {
-            score++;
-            scorebox.Text = score.ToString();
-            arm2.Visibility = Visibility.Hidden;
-            await Task.Delay(1000);
-            arm2.Visibility = Visibility.Visible;
+            if(sender == arm1)
+            await Arm_Clicked(arm1, 5000);
+            if(sender == arm2)
+            await Arm_Clicked(arm2, 2000);
+            if (sender == arm3)
+            await Arm_Clicked(arm3, 1000);
+            if (sender == arm4)
+            await Arm_Clicked(arm4, 6000);
+
+            
         }
 
-        private async void arm1_Click(object sender, RoutedEventArgs e)
+        private async Task Arm_Clicked(Button arm, Int32 delay)
         {
             score++;
             scorebox.Text = score.ToString();
-            arm1.Visibility = Visibility.Hidden;
-            await Task.Delay(5000);
-            arm1.Visibility = Visibility.Visible;
+            arm.Visibility = Visibility.Hidden;
+            await Task.Delay(delay);
+            arm.Visibility = Visibility.Visible;
         }
+
+        
+
 
         // copy from source to destination bitmap which needs to be writeable
         BitmapImage sourceBitmap = new BitmapImage(new Uri("pack://application:,,,/arm1.png"));
         WriteableBitmap destinationBitmap = null;
-        const int nFrameHeight = 80, nFrames = 17;
+        const int frameHeight = 80, totalFrames = 17;
 
-        public Image[] arms = new Image[6];
-
-        int nFrame = 0, x = 0;
+        int currentFrame = 0, x = 0;
         private void enterFrame(object sender, EventArgs e)
         {
-            destinationBitmap = new WriteableBitmap((int)Arm1.Width, (int)Arm1.Height,
+            ArmHandler(Arm);
+            ArmHandler(Arm2);
+            ArmHandler(Arm3);
+            ArmHandler(Arm4);
+        }
+
+        private void ArmHandler(Image Arm)
+        {
+            destinationBitmap = new WriteableBitmap((int)Arm.Width, (int)Arm.Height,
                 96, 96, PixelFormats.Pbgra32, null);
-            
-            Arm1.Source = destinationBitmap;
+            Arm.Source = destinationBitmap;
+
             // make a copy buffer
             int nRowBytes = sourceBitmap.PixelWidth * sourceBitmap.Format.BitsPerPixel / 8;
-            byte[] buffer = new byte[nRowBytes * nFrameHeight];
+            byte[] buffer = new byte[nRowBytes * frameHeight];
             // copy through buffer 
-            
-            sourceBitmap.CopyPixels(new Int32Rect(0, nFrame * nFrameHeight, sourceBitmap.PixelWidth, nFrameHeight), buffer, nRowBytes, 0);
-            destinationBitmap.WritePixels(new Int32Rect(x, 0, sourceBitmap.PixelWidth, nFrameHeight), buffer, nRowBytes, 0);
-            if (++nFrame == nFrames) nFrame = 0;
+            sourceBitmap.CopyPixels(new Int32Rect(0, currentFrame * frameHeight, sourceBitmap.PixelWidth, frameHeight), buffer, nRowBytes, 0);
+            destinationBitmap.WritePixels(new Int32Rect(x, 0, sourceBitmap.PixelWidth, frameHeight), buffer, nRowBytes, 0);
+            if (++currentFrame == totalFrames) currentFrame = 0;
 
-            if (x > (int)Arm1.Width - sourceBitmap.PixelWidth) x = 0;
-            
+            if (x > (int)Arm.Width - sourceBitmap.PixelWidth) x = 0;
         }
-
-        private async void arm4_Click(object sender, RoutedEventArgs e)
-        {
-            score++;
-            scorebox.Text = score.ToString();
-            arm4.Visibility = Visibility.Hidden;
-            await Task.Delay(5000);
-            arm4.Visibility = Visibility.Visible;
-        }
-
     }
 }

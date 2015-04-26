@@ -13,7 +13,7 @@
 
         <TextBox   Margin="177,504,490.309,9.764"/>
         <TextBox x:Name="scorebox" Margin="443,504,21.309,9.764"/>
-        <Button x:Name="arm1" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm4_Click" Margin="458,210,102.309,285.764" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="arm1" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm_Click" Margin="468,216,92.309,279.764" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -23,11 +23,11 @@
                 </TransformGroup>
             </Button.RenderTransform>
 
-            <Image Focusable="False" x:Name="Arm1" Height="80" Width="219"  />
+            <Image Focusable="False" x:Name="Arm" Height="80" Width="219"  />
 
 
         </Button>
-        <Button x:Name="arm2" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm4_Click" Margin="366,240,194.309,255.764" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="arm2" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm_Click" Margin="376,258,184.309,237.764" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -41,10 +41,10 @@
 
 
         </Button>
-        <Button x:Name="arm3" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm4_Click" Margin="458,210,102.309,285.764" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="arm3" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm_Click" Margin="145,221,416.309,274.764" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
+                    <ScaleTransform ScaleY="-1"/>
                     <SkewTransform/>
                     <RotateTransform Angle="-93.594"/>
                     <TranslateTransform/>
@@ -55,10 +55,10 @@
 
 
         </Button>
-        <Button x:Name="arm4" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm4_Click" Margin="458,210,102.309,285.764" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="arm4" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm_Click" Margin="238,255,323.309,240.764" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
+                    <ScaleTransform ScaleY="-1"/>
                     <SkewTransform/>
                     <RotateTransform Angle="-93.594"/>
                     <TranslateTransform/>
@@ -66,34 +66,6 @@
             </Button.RenderTransform>
 
             <Image Focusable="False" x:Name="Arm4" Height="80" Width="219"  />
-
-
-        </Button>
-        <Button x:Name="arm5" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm4_Click" Margin="458,210,102.309,285.764" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-93.594"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-
-            <Image Focusable="False" x:Name="Arm5" Height="80" Width="219"  />
-
-
-        </Button>
-        <Button x:Name="arm6" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm4_Click" Margin="458,210,102.309,285.764" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-93.594"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-
-            <Image Focusable="False" x:Name="Arm6" Height="80" Width="219"  />
 
 
         </Button>
