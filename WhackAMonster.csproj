@@ -103,13 +103,31 @@
     <Resource Include="Images\monster_arm.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="arms.png" />
+    <Resource Include="Images\arms.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="arms_2.png" />
+    <Resource Include="Images\arms_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="arm1.png" />
+    <Resource Include="Images\arm1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\whack_a_monster_splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\arm_shaded.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\game_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\game_over1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

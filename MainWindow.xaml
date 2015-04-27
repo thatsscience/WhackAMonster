@@ -4,16 +4,21 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="WhackAMonster.MainWindow"
         Title="MainWindow" Height="600" Width="800">
     <Window.Background>
-        <ImageBrush ImageSource="Images/under_the_bed_ideation_nogrid.png"/>
+        <ImageBrush ImageSource="Images/bed.png"/>
     </Window.Background>
+
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Images/under_the_bed_ideation_nogrid.png"/>
+
+            <ImageBrush ImageSource="Images/bed.png"/>
         </Grid.Background>
 
-        <TextBox   Margin="177,504,490.309,9.764"/>
-        <TextBox x:Name="scorebox" Margin="443,504,21.309,9.764"/>
-        <Button x:Name="arm1" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm_Click" Margin="468,216,92.309,279.764" RenderTransformOrigin="0.5,0.5">
+
+
+
+        <TextBox x:Name="clock"  Margin="46,501,459.309,22.764" BorderThickness="0" Background="Transparent" Foreground="White" FontFamily="PalatineLinoType" FontSize="36" d:IsHidden="True">CLOCK:</TextBox>
+        <TextBox x:Name="scorebox" Margin="339,501,121.309,22.764" BorderThickness="0" Background="Transparent" Foreground="White" FontFamily="PalatineLinoType" FontSize="36" d:IsHidden="True">SCORE:</TextBox>
+        <Button x:Name="arm1" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm_Click" Margin="465,226,95.309,269.764" RenderTransformOrigin="0.5,0.5" d:IsHidden="True">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -27,7 +32,10 @@
 
 
         </Button>
-        <Button x:Name="arm2" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm_Click" Margin="376,258,184.309,237.764" RenderTransformOrigin="0.5,0.5">
+
+
+
+        <Button x:Name="arm2" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm_Click" Margin="376,258,184.309,237.764" RenderTransformOrigin="0.5,0.5" d:IsHidden="True">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -41,7 +49,7 @@
 
 
         </Button>
-        <Button x:Name="arm3" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm_Click" Margin="145,221,416.309,274.764" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="arm3" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm_Click" Margin="145,221,416.309,274.764" RenderTransformOrigin="0.5,0.5" d:IsHidden="True">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>
@@ -55,7 +63,10 @@
 
 
         </Button>
-        <Button x:Name="arm4" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm_Click" Margin="238,255,323.309,240.764" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="game_over" Background="Transparent" Focusable="False" Command="{Binding WigglyArm}" Click="game_over_Click" d:IsHidden="True">
+            <Image Focusable="False" Height="600" Width="800" Source="Images/game_over1.png"/>
+        </Button>
+        <Button x:Name="arm4" BorderThickness="0" Focusable="False" Background="Transparent" Command="{Binding WigglyArm}" Click="arm_Click" Margin="238,255,323.309,240.764" RenderTransformOrigin="0.5,0.5" d:IsHidden="True">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>
@@ -69,5 +80,36 @@
 
 
         </Button>
+        <Button x:Name="menu_screen" Background="Transparent" Focusable="False" Command="{Binding WigglyArm}" Click="menu_screen_Click" d:IsHidden="True">
+            <Image Focusable="False" Height="600" Width="800" Source="Images/whack_a_monster_splash.png"/>
+        </Button>
+
+        <TextBox x:Name="finalScore" Margin="238,288,221.309,183.764" BorderThickness="0" Background="Transparent" Foreground="White" FontFamily="Arial" HorizontalAlignment="
+                 center" FontSize="66" d:IsHidden="True"></TextBox>
+
+
+
+        <!-- initials box-->
+        <!-- It's important that this is in the end of the XAML as it needs to be on top of everything else! -->
+        <!--<Grid x:Name="InputBox" Visibility="Collapsed">
+            <Grid Background="Black" Opacity="0.75"/>
+            <Border
+            MinWidth="250"
+            Background="Magenta" 
+            BorderBrush="Black" 
+            BorderThickness="1" 
+            CornerRadius="0,55,0,55" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center">
+                <StackPanel>
+                    <TextBlock Margin="5" Text="Input Box:" FontWeight="Bold" FontFamily="Cambria" />
+                    <TextBox MinWidth="150" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="InputTextBox"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="YesButton" Margin="5" Content="Yes" Background="{x:Null}" Click="YesButton_Click"/>
+                        <Button x:Name="NoButton" Margin="5" Content="No" Background="{x:Null}" Click="NoButton_Click" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>-->
     </Grid>
 </Window>
