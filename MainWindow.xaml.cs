@@ -46,7 +46,7 @@ namespace WhackAMonster
         #region clock
         private void CountdownClock()
         {
-            time = TimeSpan.FromSeconds(50);
+            time = TimeSpan.FromSeconds(5);
 
             timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
             {
