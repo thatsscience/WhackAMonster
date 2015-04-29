@@ -25,6 +25,16 @@ using System.Windows.Threading;
 
 namespace WhackAMonster
 {
+    public enum State
+    {
+        None, 
+        Menu,
+        Game,
+        GameOver
+    }
+
+   
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -37,6 +47,9 @@ namespace WhackAMonster
         const int frameHeight = 80, totalFrames = 17;
         int currentFrame = 0, x = 0;
         public static int score;
+        State state = State.None;
+
+
 
         public MainWindow()
         {
@@ -46,7 +59,7 @@ namespace WhackAMonster
         #region clock
         private void CountdownClock()
         {
-            time = TimeSpan.FromSeconds(5);
+            time = TimeSpan.FromSeconds(15);
 
             timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
             {
@@ -164,6 +177,7 @@ namespace WhackAMonster
             game_over.IsEnabled = false;
             game_over.Visibility = Visibility.Hidden;
             disableBtns();
+            state = State.Menu;
         }
 
         private void GameOver()
